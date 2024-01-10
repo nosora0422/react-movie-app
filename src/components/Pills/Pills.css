@@ -1,0 +1,44 @@
+.pills{
+    max-width: 1200px;
+    height: 90px;
+    margin-top: 40px;
+}
+
+.pills ul li{
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+
+.pill-link{
+    color: rgb(255, 255, 255);
+    font-family: var(--primary-font);
+    font-weight: 400;
+    padding: 12px 24px;
+    background-color: rgb(45, 45, 45);
+    border-radius: 25px;
+    border: solid 0.3px white;
+    margin-right: 10px;
+    cursor: pointer;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgb(19, 19, 19));
+}
+
+.pill-link:hover{
+    color: rgb(26, 26, 26);
+    background-color: rgb(255, 255, 255);
+}
+
+.pill-link-curr{
+    font-family: var(--primary-font);
+    font-weight: 400;
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: solid 0.3px white;
+    margin-right: 10px;
+    cursor: pointer;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgb(19, 19, 19));
+    color: rgb(26, 26, 26);
+    background-color: rgb(255, 255, 255);
+}
