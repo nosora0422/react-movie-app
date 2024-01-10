@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-movie-app/static/css/main.f7a3aa38.css",
+    "main.js": "/react-movie-app/static/js/main.2cbfa2a8.js",
+    "static/media/tmdb-logo.svg": "/react-movie-app/static/media/tmdb-logo.bb8aa703cb92c9aa31fc.svg",
+    "index.html": "/react-movie-app/index.html",
+    "main.f7a3aa38.css.map": "/react-movie-app/static/css/main.f7a3aa38.css.map",
+    "main.2cbfa2a8.js.map": "/react-movie-app/static/js/main.2cbfa2a8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f7a3aa38.css",
+    "static/js/main.2cbfa2a8.js"
+  ]
+}
