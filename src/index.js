@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from "react-router-dom"; 
+import { HashRouter, Routes, Route } from "react-router-dom"; 
 import './index.css';
 import App from './App';
 import NowPlaying from './views/NowPlaying/NowPlaying';
@@ -13,7 +13,7 @@ import Favorite from './views/Favorite/Favorite';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<NowPlaying />} />
@@ -25,6 +25,6 @@ root.render(
         <Route path="favorite" element={<Favorite/>} />
       </Route>
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );
 
