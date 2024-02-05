@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.c2e8085f.css",
-    "main.js": "./static/js/main.a99eb678.js",
+    "main.css": "./static/css/main.ba26ee7f.css",
+    "main.js": "./static/js/main.a14ba121.js",
     "static/media/tmdb-logo.svg": "./static/media/tmdb-logo.bb8aa703cb92c9aa31fc1e0b17850ed9.svg",
     "index.html": "./index.html",
-    "main.c2e8085f.css.map": "./static/css/main.c2e8085f.css.map",
-    "main.a99eb678.js.map": "./static/js/main.a99eb678.js.map"
+    "main.ba26ee7f.css.map": "./static/css/main.ba26ee7f.css.map",
+    "main.a14ba121.js.map": "./static/js/main.a14ba121.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2e8085f.css",
-    "static/js/main.a99eb678.js"
+    "static/css/main.ba26ee7f.css",
+    "static/js/main.a14ba121.js"
   ]
 }
