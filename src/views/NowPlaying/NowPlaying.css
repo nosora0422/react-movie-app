@@ -1,8 +1,10 @@
+
 .content{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
 
 .load-more-button{
     color: rgb(255, 255, 255);

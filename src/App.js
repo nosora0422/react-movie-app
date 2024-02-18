@@ -1,4 +1,4 @@
-import './App.css';
+import './global.css';
 import './reset.css';
 import Header from './shared/Header/header';
 import Nav from './shared/Nav/Nav';
@@ -19,9 +19,9 @@ function App() {
             <Header />
             <Outlet />
           </SearchProvider>
+          <Footer />
         </div>
       </div>
-      <Footer />
     </>
   );
 }

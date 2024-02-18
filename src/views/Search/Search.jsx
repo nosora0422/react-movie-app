@@ -59,7 +59,13 @@ export default function Search() {
         
     return (
         <div className="content">
-            {dataResult && <Card data={dataResult} isLoaded={isLoaded} error={error}/>}
+            {dataResult && 
+                <Card 
+                    data={dataResult} 
+                    isLoaded={isLoaded} 
+                    error={error}
+                />
+            }
             <PageIndi handlerButton={handlerButton} />
         </div>
     );

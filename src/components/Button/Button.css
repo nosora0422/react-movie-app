@@ -7,12 +7,30 @@
     color: rgb(26,26,26);
     background-color: var(--primary-200);
     border-radius: 20px;
-    padding: 12px 16px;
+    padding: 8px 4px;
     text-align: center;
+    font-size: 0.7rem;
     
 }
 
 .button:hover{
     background-color: var(--primary-hover-04);
     color: rgb(238, 238, 238);
+}
+
+@media screen and (min-width:640px) {
+    .button{
+        width: 80%;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        display: block;
+        color: rgb(26,26,26);
+        background-color: var(--primary-200);
+        border-radius: 20px;
+        padding: 12px 16px;
+        text-align: center;
+        font-size: 1rem;
+
+    }
 }

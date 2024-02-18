@@ -13,20 +13,7 @@ export default function NowPlaying() {
     const [favorites, setFavorites] = useState([]);
     const fetchUri = `https://api.themoviedb.org/3/movie/now_playing?api_key=cdde34990a2da61ed1772fc6be340638&page=${pageSize}`;
     
-    //useEffect to run first mount and run again whenever pageSize updated.
-    useEffect(() => {
-        fetchData(fetchUri);
-    },[fetchUri]);
-
-    //Get array from Local storage parse to JS object
-    useEffect(()=>{
-        const favoriteMovies = JSON.parse(localStorage.getItem('react-movie-app'));
-        if (favoriteMovies) {
-            setFavorites(favoriteMovies);
-        }
-    },[]);
     
-
     //Function to add favorite list items in Local storage
     const saveToLocal = (items) => {
         localStorage.setItem('react-movie-app', JSON.stringify(items));
@@ -52,8 +39,20 @@ export default function NowPlaying() {
                 setIsLoaded(true);
             }
         )
-
     };
+
+    //useEffect to run first mount and run again whenever pageSize updated.
+    useEffect(() => {
+        fetchData(fetchUri);
+    },[fetchUri]);
+
+    //Get array from Local storage parse to JS object
+    useEffect(()=>{
+        const favoriteMovies = JSON.parse(localStorage.getItem('react-movie-app'));
+        if (favoriteMovies) {
+            setFavorites(favoriteMovies);
+        }
+    },[]);
  
     //Funtion to load previous page and next page
     const handlerButton = (action) => {
@@ -93,6 +92,7 @@ export default function NowPlaying() {
     return (
         <div className="content">
             <Pills />
+            <h1>Now Playing</h1>
             {<Card 
                 data={dataResult} 
                 isLoaded={isLoaded} 

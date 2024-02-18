@@ -55,7 +55,12 @@ export default function TopRated() {
     return (
         <div className="content">
             <Pills />
-            {<Card data={dataResult} isLoaded={isLoaded} error={error}/>}
+            <h1>Upcoming</h1>
+            <Card 
+                data={dataResult} 
+                isLoaded={isLoaded} 
+                error={error}
+            />
             <PageIndi handlerButton={handlerButton} />
         </div>
     );

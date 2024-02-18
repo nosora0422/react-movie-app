@@ -1,12 +1,54 @@
 .pills{
+    width: 100%;
     max-width: 1200px;
-    height: 90px;
-    margin-top: 40px;
+    box-sizing: border-box;
+    padding-right: 24px;
 }
 
-.pills ul li{
+.desktop-pills{
+    display: none;
+}
+
+.category{
+    width: 100px;
+    color: rgb(255, 255, 255);
+    font-family: var(--primary-font);
+    font-weight: 400;
+    text-wrap: nowrap;
+    padding: 8px 16px;
+    background-color: rgb(45, 45, 45);
+    border-radius: 25px;
+    border: solid 0.3px white;
+    cursor: pointer;
     display: inline-block;
-    margin-bottom: 8px;
+    filter: drop-shadow(0 0 10px rgb(19, 19, 19));
+}
+
+.desktop-pills li{
+    display: inline-block;
+    
+}
+.mobile-pills{
+    position: relative;
+    padding: 16px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+.mobile-pills-open{
+    position: absolute;
+    top: 56px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 10;
+}
+
+.mobile-pills-closed{
+    display: none;
 }
 
 
@@ -14,7 +56,8 @@
     color: rgb(255, 255, 255);
     font-family: var(--primary-font);
     font-weight: 400;
-    padding: 12px 24px;
+    text-wrap: nowrap;
+    padding: 8px 16px;
     background-color: rgb(45, 45, 45);
     border-radius: 25px;
     border: solid 0.3px white;
@@ -32,7 +75,8 @@
 .pill-link-curr{
     font-family: var(--primary-font);
     font-weight: 400;
-    padding: 12px 24px;
+    text-wrap: nowrap;
+    padding: 8px 16px;
     border-radius: 25px;
     border: solid 0.3px white;
     margin-right: 10px;
@@ -41,4 +85,56 @@
     filter: drop-shadow(0 0 10px rgb(19, 19, 19));
     color: rgb(26, 26, 26);
     background-color: rgb(255, 255, 255);
+}
+
+
+.m-pill-link{
+    color: rgb(255, 255, 255);
+    font-family: var(--primary-font);
+    font-weight: 400;
+    text-wrap: nowrap;
+    padding: 8px 16px;
+    margin: 4px 0;
+    background-color: rgb(45, 45, 45);
+    border-radius: 25px;
+    border: solid 0.3px white;
+    cursor: pointer;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgb(19, 19, 19));
+
+}
+
+.m-pill-link-curr{
+    font-family: var(--primary-font);
+    font-weight: 400;
+    text-wrap: nowrap;
+    padding: 8px 16px;
+    margin: 4px 0;
+    border-radius: 25px;
+    border: solid 0.3px white;
+    cursor: pointer;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgb(19, 19, 19));
+    color: rgb(26, 26, 26);
+    background-color: rgb(255, 255, 255);
+   
+} 
+
+@media screen and (min-width:640px) {
+    .mobile-pills{
+        display: none;
+    }
+    .desktop-pills{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        justify-content: center;
+    }
+    .pills{
+        margin-top: 40px;
+    }
+    .pill-link, .pill-link-curr{
+        padding: 12px 24px;
+    }
+
 }

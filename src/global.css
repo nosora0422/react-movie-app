@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
 
 .col-1 { grid-column: span 1; }
 .col-2 { grid-column: span 2; }
@@ -17,6 +16,7 @@
 :root{
     --background: rgb(15, 15, 15);
     --body-font-color: rgb(255, 255, 255);
+    --secondary-bottun-grey:  rgb(45, 45, 45);
     --primary-500: #00bb8f;
     --primary-200: #5FE4C7;
     --primary-hover-04: #51c5ac;

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter, Routes, Route } from "react-router-dom"; 
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom"; 
 import './index.css';
 import App from './App';
 import NowPlaying from './views/NowPlaying/NowPlaying';
