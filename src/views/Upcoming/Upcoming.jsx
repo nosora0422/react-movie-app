@@ -8,8 +8,14 @@ export default function TopRated() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [dataResult, setDataResult] = useState(null);
     const [pageSize, setPageSize] = useState(1);
+    const [favorites, setFavorites] = useState([]);
     const fetchUri = `https://api.themoviedb.org/3/movie/upcoming?api_key=cdde34990a2da61ed1772fc6be340638&language=en-US&page=${pageSize}`;
     
+
+    const saveToLocal = (items) => {
+        localStorage.setItem('react-movie-app', JSON.stringify(items));
+    };
+
     //useEffect to run first mount and run again whenever pageSize updated.
     useEffect(() => {
         fetchData(fetchUri);
@@ -38,6 +44,13 @@ export default function TopRated() {
         )
 
     }
+
+    useEffect(()=>{
+        const favoriteMovies = JSON.parse(localStorage.getItem('react-movie-app'));
+        if (favoriteMovies) {
+            setFavorites(favoriteMovies);
+        }
+    },[]);
  
     //Funtion to load previous page and next page
     const handlerButton = (action) => {
@@ -51,6 +64,28 @@ export default function TopRated() {
             setPageSize(prevPage => prevPage + 1);
         }
     }
+
+    //Function to determine movie id and add to favotrite list only a new item in the local storage
+    const addFavoriteMovie = (movie) =>{
+        const isSameItem = favorites.some((favorite) => favorite.id === movie.id)
+        
+        if (!isSameItem){
+            const newFavoriteMovie = [...favorites, { ...movie, isAddedToList: true }];
+            setFavorites(newFavoriteMovie);
+            // console.log(newFavoriteMovie);
+            saveToLocal(newFavoriteMovie);
+            alert('The movie has been successfully added to your list!');
+        } else {
+           alert('The movie already exists in your list!'); 
+        }
+    }
+    //Function to remove from favotrite list by filtering items that have different movie id than the selected item.
+    const removeFavouriteMovie = (movie) =>{
+        const newFavoriteMovie = favorites.filter((favorite)=>favorite.id !== movie.id);
+        setFavorites(newFavoriteMovie);
+        saveToLocal(newFavoriteMovie);
+        // console.log(newFavoriteMovie);
+    };
         
     return (
         <div className="content">
@@ -60,6 +95,9 @@ export default function TopRated() {
                 data={dataResult} 
                 isLoaded={isLoaded} 
                 error={error}
+                handleFavorite={addFavoriteMovie}
+                removeFavourite={removeFavouriteMovie}
+                isFavoritesData={false}
             />
             <PageIndi handlerButton={handlerButton} />
         </div>

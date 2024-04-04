@@ -19,6 +19,7 @@
     min-width: 120px;
     height: 200px;
     font-family: var(--primary-font);
+    border-radius: 12px;
     overflow: hidden;
     filter: drop-shadow(3px 3px 5px #000);    
 }

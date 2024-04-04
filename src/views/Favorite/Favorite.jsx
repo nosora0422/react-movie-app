@@ -76,7 +76,7 @@ export default function Favorite() {
         isSetBoxOpen(prev => !prev)
     );
 
-    //\add favorite list items in Local storage
+    //add favorite list items in Local storage
     const saveToLocal = (items) => {
         localStorage.setItem('react-movie-app', JSON.stringify(items));
     };
@@ -89,7 +89,7 @@ export default function Favorite() {
         // console.log(newFavoriteMovie);
     }
 
-    //\remove from favotrite list by filtering items that have different movie id than the selected item.
+    //remove from favotrite list by filtering items that have different movie id than the selected item.
     const removeFavouriteMovie = (movie) =>{
         const newFavoriteMovie = favorites.filter((favorite)=>favorite.id !== movie.id);
         setFavorites(newFavoriteMovie);
@@ -110,10 +110,10 @@ export default function Favorite() {
                         <FontAwesomeIcon icon={faShareFromSquare} style={{paddingRight: '8px'}}/>
                         Share
                     </button>
-                    <ul className='social-media-box'>
+                    <ul className="social-media-box">
                         {isBoxOpen && socialMediaIcons.map((iconData, index) => (
                             <motion.li 
-                                className='social-media-icon' 
+                                className="social-media-icon" 
                                 key={index}
                                 initial={{opacity:0, translateX:10}}
                                 animate={{opacity:1, translateX:0}}
@@ -133,7 +133,7 @@ export default function Favorite() {
                 </div>
             </div>
             <div>
-                {favorites.length > 0 ? 
+                {favorites !== null && favorites.length > 0 ? 
                     <Card
                         data={favorites} 
                         handleFavorite={addFavoriteMovie}

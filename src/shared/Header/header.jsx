@@ -43,7 +43,8 @@ export default function Header(){
                     <input 
                         type="text" 
                         id="search" 
-                        required minLength="4" 
+                        required 
+                        minLength="4" 
                         placeholder="Search movies" 
                         onChange={handleChange}
                     />
@@ -61,7 +62,8 @@ export default function Header(){
                     <input 
                         type="text" 
                         id="search" 
-                        required minLength="4" 
+                        required 
+                        minLength="4" 
                         placeholder="Search movies" 
                         onChange={handleChange}
                     />
